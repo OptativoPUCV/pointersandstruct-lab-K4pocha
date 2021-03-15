@@ -137,6 +137,7 @@ void sumaV(Vector * a, Vector * b, Vector * c) {
 
     *aux_c = *aux_a + *aux_b; /** Al apuntar antes al .dato, si operamos sobre el                                     vector afectariamos a esta "zona" porque es donde                                   esta apuntando **/
   }
+  
 
 }
 
@@ -146,5 +147,12 @@ Use las operaciones implementadas de vectores para
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
 void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
+  Vector *A;
+  Vector *B;
+  
+  A = crearVector(2);
+  B = crearVector(2);
 
+  sumaV(A,B,c);
+ 
 }
