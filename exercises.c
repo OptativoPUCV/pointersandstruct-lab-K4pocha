@@ -102,6 +102,7 @@ void asignarValor(Vector * v, int i, int valor) {
 
   Valor = (*v).datos+i;
   *Valor = valor;
+  /** Por que (*v).datos+i = valor no se puede asignar? **/
 }
 
 /*
@@ -123,6 +124,19 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
+  int *aux_a, *aux_b, *aux_c,i;
+
+  int total = (*a).capacidad;
+
+  for (i = 0; i < total; i++)
+  {
+    aux_a = (*a).datos+i;
+    aux_b = (*b).datos+i;
+    
+    aux_c = (*c).datos+i; //Se apunta a la pos de memoria que contiene el dato
+
+    *aux_c = *aux_a + *aux_b; /** Al apuntar antes al .dato, si operamos sobre el                                     vector afectariamos a esta "zona" porque es donde                                   esta apuntando **/
+  }
 
 }
 
