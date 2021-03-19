@@ -135,7 +135,7 @@ void sumaV(Vector * a, Vector * b, Vector * c) {
     
     aux_c = (*c).datos+i; //Se apunta a la pos de memoria que contiene el dato
 
-    *aux_c = *aux_a + *aux_b; /** Al apuntar antes al .dato, si operamos sobre el                                     vector afectariamos a esta "zona" porque es donde                                   esta apuntando **/
+    *aux_c = *aux_a + *aux_b; /** Al apuntar antes al .dato, si operamos sobre el                                     vector afectariamos a esta "zona(c.datos[i])"                                       porque es donde esta apuntando **/
   }
   
 
